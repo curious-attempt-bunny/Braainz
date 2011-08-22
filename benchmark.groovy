@@ -3,7 +3,7 @@ def actor = { state ->
 }
 
 Random seedGenerator = new Random(1234) // repeatable
-int sampleSize = 10000
+int sampleSize = 1000
 
 int totalScore = (0..sampleSize).sum {
 	return new Simulator(seed:seedGenerator.nextInt(), actor:actor).execute()
